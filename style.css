@@ -41,9 +41,12 @@ body {
   position: relative;
 }
 
-#screen4.active {
-  display: block;
+#screen4 {
+  background: url("assets/doodle2.jpg") center / cover no-repeat;
+  position: relative;
+  display: flex;
 }
+
 
 #screen5 {
   background: url("assets/doodle4.jpg") center/cover no-repeat;
@@ -162,4 +165,5 @@ button {
 @keyframes rain {
   to { top: 110%; }
 }
+
 
