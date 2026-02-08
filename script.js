@@ -5,35 +5,45 @@ const yesSound = document.getElementById("yesSound");
 const noSound = document.getElementById("noSound");
 
 function showScreen(id) {
-  screens.forEach(s => s.classList.remove("active"));
+  screens.forEach(screen => screen.classList.remove("active"));
   document.getElementById(id).classList.add("active");
 }
 
-document.getElementById("toScreen2").onclick = () => {
+// Screen navigation
+document.getElementById("toScreen2").addEventListener("click", () => {
+  clickSound.currentTime = 0;
   clickSound.play();
   showScreen("screen2");
-};
+});
 
-document.getElementById("toScreen3").onclick = () => {
+document.getElementById("toScreen3").addEventListener("click", () => {
+  clickSound.currentTime = 0;
   clickSound.play();
   showScreen("screen3");
-};
+});
 
-document.getElementById("toScreen4").onclick = () => {
+document.getElementById("toScreen4").addEventListener("click", () => {
+  clickSound.currentTime = 0;
   clickSound.play();
   showScreen("screen4");
-};
+});
 
-document.getElementById("noBtn").onclick = () => {
+// NO button
+document.getElementById("noBtn").addEventListener("click", () => {
+  noSound.currentTime = 0;
   noSound.play();
   document.getElementById("avatar").src = "assets/avatar-no.png";
-};
+});
 
-document.getElementById("yesBtn").onclick = () => {
+// YES button
+document.getElementById("yesBtn").addEventListener("click", () => {
+  yesSound.currentTime = 0;
   yesSound.play();
-  document.getElementById("avatar").src = "assets/avatar-yes.png";
+
+  const avatar = document.getElementById("avatar");
+  avatar.src = "assets/avatar-yes.png";
 
   setTimeout(() => {
     showScreen("screen5");
   }, 2500);
-};
+});
