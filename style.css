@@ -14,13 +14,11 @@ body {
   overflow: hidden;
 }
 
-/* ===== SCREEN SYSTEM (LOCKED) ===== */
+/* ===== SCREEN SYSTEM ===== */
 .screen {
   position: absolute;
   inset: 0;
-  width: 100vw;
-  height: 100vh;
-  display: none !important;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -28,8 +26,7 @@ body {
 }
 
 .screen.active {
-  display: flex !important;
-  z-index: 10;
+  display: flex;
 }
 
 /* ===== BACKGROUNDS ===== */
@@ -45,7 +42,7 @@ body {
 }
 
 #screen4.active {
-  display: block !important;
+  display: block;
 }
 
 #screen5 {
@@ -74,6 +71,7 @@ button {
   background: #f5e6c8;
   padding: 40px;
   border-radius: 8px;
+  max-width: 520px;
 }
 
 .side-sticker {
@@ -113,17 +111,11 @@ button {
 #noBtn  { position: absolute; right: 20%; }
 
 /* ===== SCREEN 5 ===== */
-#screen5.active {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-}
-
 .final-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
 }
 
 .final-sticker {
@@ -134,16 +126,6 @@ button {
   width: 260px;
 }
 
-.final-text {
-  font-size: 42px;
-  font-weight: bold;
-}
-
-.final-sub {
-  font-size: 24px;
-}
-
-/* ===== HEARTS ===== */
 .hearts::before {
   content: "💖 💕 💗 💓 💘 💞";
   position: absolute;
