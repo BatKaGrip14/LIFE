@@ -14,16 +14,13 @@ body {
   overflow: hidden;
 }
 
-/* ===== SCREENS ===== */
+/* ===== SCREEN SYSTEM (LOCKED) ===== */
 .screen {
-  display: none;
+  position: absolute;
+  inset: 0;
   width: 100vw;
   height: 100vh;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
+  display: none !important;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -31,7 +28,8 @@ body {
 }
 
 .screen.active {
-  display: flex;
+  display: flex !important;
+  z-index: 10;
 }
 
 /* ===== BACKGROUNDS ===== */
@@ -46,23 +44,16 @@ body {
   position: relative;
 }
 
-/* screen4 needs block layout */
 #screen4.active {
-  display: block;
+  display: block !important;
 }
 
-/* screen5 background ONLY — NO display here */
 #screen5 {
   background: linear-gradient(135deg, #ff69b4, #ffb6c1);
   position: relative;
 }
 
-/* ===== TEXT & BUTTONS ===== */
-h1 {
-  font-size: 42px;
-  margin-bottom: 30px;
-}
-
+/* ===== BUTTONS ===== */
 .box-btn,
 .hanging-btn,
 button {
@@ -93,12 +84,15 @@ button {
 }
 
 /* ===== SCREEN 4 ===== */
-#screen4 .valentine-box {
+.valentine-box {
   position: absolute;
   top: 320px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  width: 360px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
 }
 
 .avatar {
@@ -120,12 +114,12 @@ button {
 
 /* ===== SCREEN 5 ===== */
 #screen5.active {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
 }
 
-#screen5 .final-wrapper {
+.final-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -149,6 +143,7 @@ button {
   font-size: 24px;
 }
 
+/* ===== HEARTS ===== */
 .hearts::before {
   content: "💖 💕 💗 💓 💘 💞";
   position: absolute;
