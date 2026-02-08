@@ -234,37 +234,20 @@ button {
   to { top: 110%; }
 }
 /* 🔒 HARD SCREEN ISOLATION */
-.screen {
-  visibility: hidden;
-  opacity: 0;
-}
 
-.screen.active {
-  visibility: visible;
-  opacity: 1;
-}
+
+
 /* 🔥 OVERRIDE FLEX ONLY FOR SCREEN 4 */
-#screen4.active {
-  display: block !important;
-}
+
 /* ===== HARD FIXES ===== */
 
 /* stop screen bleeding */
-.screen {
-  visibility: hidden;
-  opacity: 0;
-}
 
-.screen.active {
-  visibility: visible;
-  opacity: 1;
-}
+
+
 
 /* override flex ONLY for screen4 */
-#screen4.active {
-  display: block !important;
-  position: relative;
-}
+
 
 /* screen4 layout */
 #screen4 .floating-sticker {
@@ -394,3 +377,17 @@ button {
   visibility: visible;
   opacity: 1;
 }
+#screen5 {
+  display: flex;
+  position: relative;
+}
+
+#screen5 .final-sticker {
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+
