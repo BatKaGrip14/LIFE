@@ -242,4 +242,10 @@ h1 {
   animation: pop 1s ease infinite alternate;
 }
 
+.floating-sticker {
+  width: 200px;
+  margin-bottom: 20px;
+  animation: pop 1s ease;
+}
+
 
