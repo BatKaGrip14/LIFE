@@ -5,143 +5,32 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* 🌸 BODY */
 html, body {
   width: 100%;
   height: 100%;
 }
 
 body {
-  margin: 0;
-  height: 100vh;
-  background-color: #ffb6c1;
-  background-image:
-    radial-gradient(#ff69b4 2px, transparent 2px),
-    radial-gradient(#ff69b4 2px, transparent 2px);
-  background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
   overflow: hidden;
 }
 
-/* 🖥️ SCREENS */
+/* ===== SCREENS ===== */
 .screen {
-  display: none;
-  width: 100vw;
-  height: 100vh;
-
   position: absolute;
-  top: 0;
-  left: 0;
-
-  z-index: 0;
-  pointer-events: none;
-
-  /* DEFAULT FLEX (for other screens) */
-  display: flex;
-  flex-direction: column;
+  inset: 0;
+  display: none;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   text-align: center;
 }
 
 .screen.active {
   display: flex;
-  z-index: 10;
-  pointer-events: auto;
-  animation: fadeIn 0.8s ease;
+  animation: fadeIn 0.6s ease;
 }
 
-/* ✨ TEXT */
-h1 {
-  color: black;
-  font-size: 42px;
-  margin-bottom: 30px;
-}
-
-/* 🕺 BOUNCE */
-.bounce {
-  animation: bounceIn 1s ease;
-}
-
-@keyframes bounceIn {
-  0% { transform: scale(0.3); opacity: 0; }
-  50% { transform: scale(1.05); }
-  70% { transform: scale(0.9); }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-/* 🌫️ FADE */
-.fade {
-  animation: fadeIn 1.2s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* 🔲 BUTTONS */
-.box-btn,
-.hanging-btn,
-button {
-  padding: 18px 40px;
-  background: pink;
-  color: black;
-  border-radius: 12px;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  transition: transform 0.2s;
-  pointer-events: auto;
-}
-
-.box-btn:hover {
-  transform: scale(1.08);
-}
-
-/* 📜 PAPER */
-.paper {
-  background: #f5e6c8;
-  width: 520px;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow:
-    inset 0 0 10px rgba(0,0,0,0.1),
-    0 20px 40px rgba(0,0,0,0.4);
-  transform: rotate(-1deg);
-}
-
-.paper p {
-  font-size: 17px;
-  line-height: 1.6;
-}
-
-/* 📎 LETTER + STICKER */
-.letter-wrap {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
-
-.side-sticker {
-  width: 180px;
-  animation: pop 1s ease infinite alternate;
-}
-
-/* 🔽 HANGING BUTTON */
-@keyframes swing {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(3deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(-3deg); }
-}
-
-.hanging-btn {
-  margin-top: 40px;
-  animation: swing 2s ease-in-out infinite;
-}
-
-/* 💖 BACKGROUNDS */
+/* ===== BACKGROUNDS ===== */
 #screen1,
 #screen2,
 #screen3 {
@@ -153,241 +42,107 @@ button {
   position: relative;
 }
 
-
-/* 💌 FLOATING STICKER */
-.floating-sticker {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 240px;
-  z-index: 20;
-  pointer-events: none;
+/* IMPORTANT: override flex ONLY for screen 4 */
+#screen4.active {
+  display: block;
 }
 
-/* 💌 VALENTINE BOX */
-.valentine-box {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  width: 360px;
-  text-align: center;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+#screen5 {
+  background: linear-gradient(135deg, #ff69b4, #ffb6c1);
+  position: relative;
+}
 
+/* ===== TEXT & BUTTONS ===== */
+h1 {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.box-btn,
+.hanging-btn,
+button {
+  padding: 18px 40px;
+  background: pink;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* ===== SCREEN 3 ===== */
+.letter-wrap {
+  display: flex;
+  gap: 30px;
+}
+
+.paper {
+  background: #f5e6c8;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.side-sticker {
+  width: 180px;
+}
+
+/* ===== SCREEN 4 ===== */
+.valentine-box {
   position: absolute;
   top: 320px;
   left: 50%;
   transform: translateX(-50%);
+  width: 360px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
 }
 
-/* 🧍 AVATAR */
 .avatar {
   width: 120px;
   position: absolute;
   top: -90px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 30;
-  pointer-events: none;
 }
 
-/* 🔘 YES / NO */
 .val-buttons {
-  margin-top: 30px;
   position: relative;
   height: 80px;
+  margin-top: 30px;
 }
 
-#yesBtn { left: 20%; position: absolute; }
-#noBtn  { right: 20%; position: absolute; }
+#yesBtn { position: absolute; left: 20%; }
+#noBtn  { position: absolute; right: 20%; }
 
-/* 🎊 FINAL */
-#screen5 {
-  background: linear-gradient(135deg, #ff69b4, #ffb6c1);
+/* ===== SCREEN 5 ===== */
+.final-sticker {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
 }
 
 .final-gif {
   width: 260px;
+  margin-top: 200px;
 }
 
 .final-text {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-.final-sub {
-  margin-top: 10px;
-}
-
-/* 💕 HEARTS */
 .hearts::before {
   content: "💖 💕 💗 💓 💘 💞";
   position: absolute;
-  width: 100%;
   top: -10%;
-  font-size: 40px;
+  width: 100%;
   animation: rain 4s linear infinite;
-  pointer-events: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes rain {
-  from { top: -10%; }
   to { top: 110%; }
 }
-/* 🔒 HARD SCREEN ISOLATION */
-
-
-
-/* 🔥 OVERRIDE FLEX ONLY FOR SCREEN 4 */
-
-/* ===== HARD FIXES ===== */
-
-/* stop screen bleeding */
-
-
-
-
-/* override flex ONLY for screen4 */
-
-
-/* screen4 layout */
-#screen4 .floating-sticker {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 240px;
-  z-index: 20;
-  pointer-events: none;
-}
-
-#screen4 .valentine-box {
-  position: absolute;
-  top: 320px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#screen4 .avatar {
-  position: absolute;
-  top: -90px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 30;
-}
-
-/* =========================
-   HARD SCREEN SCOPING FIX
-   ========================= */
-
-/* SCREEN 4 ONLY */
-#screen4 .floating-sticker {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 240px;
-  z-index: 20;
-  pointer-events: none;
-}
-
-#screen4 .valentine-box {
-  position: absolute;
-  top: 320px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-
-#screen4 .avatar {
-  position: absolute;
-  top: -90px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  z-index: 30;
-}
-/* =========================
-   HARD SCREEN SCOPING FIX
-   ========================= */
-
-/* SCREEN 4 ONLY */
-#screen4 .floating-sticker {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 240px;
-  z-index: 20;
-  pointer-events: none;
-}
-
-#screen4 .valentine-box {
-  position: absolute;
-  top: 320px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-
-#screen4 .avatar {
-  position: absolute;
-  top: -90px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  z-index: 30;
-}
-
-/* SCREEN 5 ONLY */
-#screen5 .final-gif {
-  display: block;
-}
-
-#screen5 .floating-sticker {
-  display: none !important;
-}
-/* ===== SCREEN 5 FINAL STICKER ===== */
-#screen5 .final-sticker {
-  width: 260px;
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 20;
-}
-
-#screen5 {
-  position: relative;
-}
-
-/* ===== FIX SCREEN 5 VISIBILITY ===== */
-
-#screen5 {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-#screen5 > * {
-  position: relative;
-  z-index: 20;
-  visibility: visible;
-  opacity: 1;
-}
-#screen5 {
-  display: flex;
-  position: relative;
-}
-
-#screen5 .final-sticker {
-  display: block;
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 50;
-}
-
