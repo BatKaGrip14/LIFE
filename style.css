@@ -7,6 +7,7 @@
 
 /* 🌸 PINK DOODLE BACKGROUND */
 body {
+  margin: 0;
   height: 100vh;
   background-color: #ffb6c1;
   background-image:
@@ -14,18 +15,25 @@ body {
     radial-gradient(#ff69b4 2px, transparent 2px);
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
 }
 
 /* 🖥️ SCREENS */
 .screen {
   display: none;
+  width: 100vw;
+  height: 100vh;
+
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
 
 .screen.active {
   display: flex;
@@ -246,6 +254,11 @@ h1 {
   animation: pop 1s ease;
 }
 
+
+.screen {
+  position: relative;
+  z-index: 1;
+}
 
 
 
