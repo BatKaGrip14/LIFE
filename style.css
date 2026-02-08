@@ -228,3 +228,11 @@ h1 {
   width: 260px;
   animation: pop 0.8s ease forwards;
 }
+#screen1,
+#screen2,
+#screen3 {
+  background: url("assets/doodle1.jpg") center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
