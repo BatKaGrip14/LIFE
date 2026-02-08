@@ -114,8 +114,9 @@ h1 {
 }
 /* 💖 HEART BACKGROUND */
 #screen4 {
-  background: url("assets/doodle2.gif") center/cover no-repeat;
+  background: url("assets/doodle2.jpg") center/cover no-repeat;
 }
+
 
 
 
@@ -244,6 +245,7 @@ h1 {
   margin-bottom: 20px;
   animation: pop 1s ease;
 }
+
 
 
 
