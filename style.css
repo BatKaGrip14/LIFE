@@ -211,4 +211,39 @@ button {
   from { top: -10%; }
   to { top: 110%; }
 }
+/* =========================
+   SCREEN 4 LAYOUT FIX
+   ========================= */
+
+#screen4 {
+  justify-content: flex-start;
+}
+
+/* Floating sticker ABOVE the box */
+.floating-sticker {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+/* Push box down so sticker has space */
+#screen4 .valentine-box {
+  margin-top: 220px;
+}
+
+/* Avatar sits on top of box */
+#screen4 .avatar {
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  z-index: 30;
+  pointer-events: none;
+}
+
 
