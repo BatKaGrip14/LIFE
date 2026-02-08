@@ -235,3 +235,64 @@ button {
   from { top: -10%; }
   to { top: 110%; }
 }
+/* 🔒 HARD SCREEN ISOLATION */
+.screen {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.screen.active {
+  visibility: visible;
+  opacity: 1;
+}
+/* 🔥 OVERRIDE FLEX ONLY FOR SCREEN 4 */
+#screen4.active {
+  display: block !important;
+}
+/* ===== HARD FIXES ===== */
+
+/* stop screen bleeding */
+.screen {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.screen.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* override flex ONLY for screen4 */
+#screen4.active {
+  display: block !important;
+  position: relative;
+}
+
+/* screen4 layout */
+#screen4 .floating-sticker {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+#screen4 .valentine-box {
+  position: absolute;
+  top: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#screen4 .avatar {
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+}
+
+
+
