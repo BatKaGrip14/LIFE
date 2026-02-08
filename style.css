@@ -46,8 +46,24 @@ body {
 }
 
 #screen5 {
-  background: linear-gradient(135deg, #ff69b4, #ffb6c1);
+  background: url("assets/doodle4.jpg") center/cover no-repeat;
   position: relative;
+}
+
+/* ===== TEXT ===== */
+.big-text {
+  font-size: 52px;
+  margin-bottom: 60px;
+}
+
+.final-text {
+  font-size: 46px;
+  margin-top: 40px;
+}
+
+.final-sub {
+  font-size: 26px;
+  margin-top: 15px;
 }
 
 /* ===== BUTTONS ===== */
@@ -58,6 +74,15 @@ button {
   background: pink;
   border-radius: 12px;
   cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.click-feel:active {
+  transform: scale(0.94);
+}
+
+.click-feel:hover {
+  transform: scale(1.05);
 }
 
 /* ===== SCREEN 3 ===== */
@@ -65,20 +90,30 @@ button {
   display: flex;
   gap: 30px;
   align-items: center;
+  max-width: 80%;
 }
 
-.paper {
-  background: #f5e6c8;
-  padding: 40px;
-  border-radius: 8px;
-  max-width: 520px;
+.no-box {
+  background: transparent;
 }
 
 .side-sticker {
   width: 200px;
   height: auto;
   object-fit: contain;
-  flex-shrink: 0;
+}
+
+/* Hanging animation */
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+.hanging-btn {
+  margin-top: 40px;
+  animation: swing 2s ease-in-out infinite;
 }
 
 /* ===== SCREEN 4 ===== */
@@ -111,21 +146,11 @@ button {
 #noBtn  { position: absolute; right: 20%; }
 
 /* ===== SCREEN 5 ===== */
-.final-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
 .final-sticker {
   width: 260px;
 }
 
-.final-gif {
-  width: 260px;
-}
-
+/* Hearts */
 .hearts::before {
   content: "💖 💕 💗 💓 💘 💞";
   position: absolute;
@@ -137,3 +162,4 @@ button {
 @keyframes rain {
   to { top: 110%; }
 }
+
