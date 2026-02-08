@@ -5,30 +5,27 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* 🌸 PINK DOODLE BACKGROUND */
+/* =========================
+   BASE
+========================= */
 body {
   height: 100vh;
-  background-color: #ffb6c1;
-  background-image:
-    radial-gradient(#ff69b4 2px, transparent 2px),
-    radial-gradient(#ff69b4 2px, transparent 2px);
-  background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 }
 
-/* 🖥️ SCREENS */
+/* =========================
+   SCREEN CONTROL (CRITICAL)
+========================= */
 .screen {
   display: none;
+  position: absolute;
+  inset: 0;
+
   width: 100%;
   height: 100vh;
 
-  display: flex;
   justify-content: center;
   align-items: center;
-
   text-align: center;
 }
 
@@ -37,36 +34,88 @@ body {
   animation: fadeIn 0.8s ease;
 }
 
-/* ✨ TEXT */
+/* =========================
+   SCREEN 1 & 2 BACKGROUND
+========================= */
+#screen1,
+#screen2 {
+  background-color: #fff6c9; /* light yellow */
+}
+
+/* =========================
+   BIG RECTANGULAR BOX
+========================= */
+.main-box {
+  width: 75%;
+  height: 70%;
+
+  background-image: url("assets/box-doodle.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  border: 3px solid black;
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   HEADINGS
+========================= */
 h1 {
   color: black;
   font-size: 42px;
   margin-bottom: 30px;
 }
 
-/* 🕺 BOUNCE */
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .bounce {
   animation: bounceIn 1s ease;
 }
 
 @keyframes bounceIn {
-  0% { transform: scale(0.3); opacity: 0; }
-  50% { transform: scale(1.05); }
-  70% { transform: scale(0.9); }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
-/* 🌫️ FADE */
 .fade {
   animation: fadeIn 1.2s ease;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* 🔲 RECTANGULAR BOX BUTTON */
+/* =========================
+   BUTTONS (HELLO / CURIOUS)
+========================= */
 .box-btn {
   padding: 18px 40px;
   background: pink;
@@ -74,7 +123,7 @@ h1 {
   border-radius: 12px;
   font-size: 20px;
   cursor: pointer;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
 }
 
@@ -82,15 +131,21 @@ h1 {
   transform: scale(1.08);
 }
 
-/* 📜 PAPER LETTER */
+/* =========================
+   SCREEN 3 – LETTER
+========================= */
+#screen3 {
+  background: black;
+}
+
 .paper {
   background: #f5e6c8;
   width: 520px;
   padding: 40px;
   border-radius: 8px;
   box-shadow:
-    inset 0 0 10px rgba(0,0,0,0.1),
-    0 20px 40px rgba(0,0,0,0.4);
+    inset 0 0 10px rgba(0, 0, 0, 0.1),
+    0 20px 40px rgba(0, 0, 0, 0.4);
   transform: rotate(-1deg);
 }
 
@@ -100,7 +155,7 @@ h1 {
   line-height: 1.6;
 }
 
-/* 🔽 HANGING BUTTON */
+/* Hanging button */
 .hanging-btn {
   margin-top: 40px;
   padding: 14px 30px;
@@ -117,7 +172,10 @@ h1 {
   50% { transform: rotate(0deg); }
   75% { transform: rotate(-3deg); }
 }
-/* 💖 HEART BACKGROUND */
+
+/* =========================
+   SCREEN 4 – VALENTINE
+========================= */
 #screen4 {
   background:
     radial-gradient(circle at 20% 20%, #ff69b4 8%, transparent 9%),
@@ -127,18 +185,16 @@ h1 {
   background-size: 120px 120px;
 }
 
-/* 💌 VALENTINE BOX */
 .valentine-box {
   background: white;
   padding: 40px;
   border-radius: 20px;
   width: 360px;
   text-align: center;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
-/* 🧍 AVATAR */
 .avatar {
   width: 90px;
   height: 90px;
@@ -152,13 +208,11 @@ h1 {
   border: 4px solid pink;
 }
 
-/* ❓ QUESTION */
 .valentine-box h2 {
   margin-top: 60px;
   color: black;
 }
 
-/* 🔘 BUTTONS */
 .val-buttons {
   margin-top: 30px;
   position: relative;
@@ -176,21 +230,20 @@ h1 {
   position: absolute;
 }
 
-/* YES */
-#yesBtn {
-  left: 20%;
-}
+#yesBtn { left: 20%; }
+#noBtn { right: 20%; }
 
-/* NO */
-#noBtn {
-  right: 20%;
-}
-/* 🎊 FINAL SCREEN */
+/* =========================
+   SCREEN 5 – CELEBRATION
+========================= */
 #screen5 {
   background: linear-gradient(135deg, #ff69b4, #ffb6c1);
-  overflow: hidden;
 }
 
+.final-gif {
+  width: 260px;
+  animation: pop 0.8s ease forwards;
+}
 
 @keyframes pop {
   0% { transform: scale(0); }
@@ -198,7 +251,6 @@ h1 {
   100% { transform: scale(1); }
 }
 
-/* 🎉 TEXT */
 .final-text {
   color: black;
   margin-top: 30px;
@@ -209,7 +261,6 @@ h1 {
   margin-top: 10px;
 }
 
-/* 💕 FLOATING HEARTS */
 .hearts::before {
   content: "💖 💕 💗 💓 💘 💞";
   position: absolute;
@@ -223,45 +274,3 @@ h1 {
   from { top: -10%; }
   to { top: 110%; }
 }
-/* 🎞️ FINAL GIF */
-.final-gif {
-  width: 260px;
-  animation: pop 0.8s ease forwards;
-}
-#screen1, #screen2 {
-  background-color: #fff6c9; /* light yellow */
-  width: 100%;
-  height: 100vh;
-}
-.main-box {
-  width: 75%;
-  height: 70%;
-
-  background-color: pink;
-  background-image: url("assets/box-doodle.jpg");
-  background-repeat: repeat;
-  background-size: cover;
-
-  border: 3px solid black;
-  border-radius: 25px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-}
-/* 🧭 FORCE CENTER SCREENS */
-.screen {
-  display: none;
-  width: 100%;
-  height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-}
-
