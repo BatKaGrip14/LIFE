@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   const screens = document.querySelectorAll(".screen");
+
   const clickSound = document.getElementById("clickSound");
   const yesSound = document.getElementById("yesSound");
   const noSound = document.getElementById("noSound");
