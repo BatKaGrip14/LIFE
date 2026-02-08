@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const x = Math.random() * 200 - 100;
     const y = Math.random() * 120 - 60;
+
     noBtn.style.transform = `translate(${x}px, ${y}px)`;
   });
 
@@ -46,7 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
     yesSound.currentTime = 0;
     yesSound.play();
     avatar.src = "assets/avatar-yes.png";
-    setTimeout(() => showScreen("screen5"), 1200);
+
+    setTimeout(() => showScreen("screen5"), 2200);
   };
 
 });
