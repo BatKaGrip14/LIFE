@@ -119,13 +119,24 @@ button:active {
 
 /* ===== SCREEN 4 ===== */
 .valentine-box {
-  background: white;
-  padding: 40px;
-  border-radius: 22px;
-  width: 360px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  background: transparent;        /* ❌ remove white */
+  padding: 0;                     /* ❌ no padding */
+  border-radius: 0;               /* ❌ no rounded box */
+  width: auto;
+  box-shadow: none;               /* ❌ no shadow */
+
   position: relative;
+  text-align: center;
 }
+#screen4 h2 {
+  margin-top: 60px;
+  font-size: 42px;
+}
+
+#screen4 .val-buttons {
+  margin-top: 40px;
+}
+
 
 .avatar {
   width: 130px;
@@ -145,10 +156,12 @@ button:active {
 #noBtn  { position: absolute; right: 20%; }
 
 /* ===== SCREEN 5 ===== */
-.final-sticker {
-  width: 280px;
+#screen5 .final-sticker {
+  width: 420px;          /* 🔥 bigger */
+  max-width: 90vw;
   margin-bottom: 30px;
 }
+
 
 .final-gif {
   width: 260px;
@@ -167,3 +180,4 @@ button:active {
 @keyframes rain {
   to { top: 110%; }
 }
+
