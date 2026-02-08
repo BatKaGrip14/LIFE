@@ -2,22 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Segoe UI, sans-serif;
 }
 
-/* BODY */
 body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
-/* SCREENS */
 .screen {
   display: none;
   width: 100vw;
   height: 100vh;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -27,15 +24,12 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  z-index: 1;
 }
 
 .screen.active {
   display: flex;
 }
 
-/* BACKGROUNDS */
 #screen1,
 #screen2,
 #screen3 {
@@ -46,31 +40,14 @@ body {
   background: url("assets/doodle2.jpg") center/cover no-repeat;
 }
 
-#screen5 {
-  background: linear-gradient(135deg, #ff69b4, #ffb6c1);
-}
-
-/* TEXT */
-h1 {
-  font-size: 42px;
-  margin-bottom: 30px;
-}
-
-/* BUTTON */
 .box-btn {
   padding: 18px 40px;
   background: pink;
   border-radius: 12px;
   cursor: pointer;
   font-size: 20px;
-  transition: transform 0.2s;
 }
 
-.box-btn:hover {
-  transform: scale(1.08);
-}
-
-/* LETTER */
 .letter-wrap {
   display: flex;
   gap: 30px;
@@ -79,17 +56,14 @@ h1 {
 
 .paper {
   background: #f5e6c8;
-  width: 520px;
   padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  width: 520px;
 }
 
 .side-sticker {
   width: 180px;
 }
 
-/* HANGING BUTTON */
 .hanging-btn {
   margin-top: 40px;
   padding: 14px 30px;
@@ -98,7 +72,6 @@ h1 {
   cursor: pointer;
 }
 
-/* SCREEN 4 */
 .floating-sticker {
   width: 200px;
   margin-bottom: 20px;
@@ -108,7 +81,6 @@ h1 {
   background: white;
   padding: 40px;
   border-radius: 20px;
-  width: 360px;
   position: relative;
 }
 
@@ -118,39 +90,4 @@ h1 {
   top: -70px;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.val-buttons {
-  position: relative;
-  height: 80px;
-  margin-top: 30px;
-}
-
-#yesBtn {
-  position: absolute;
-  left: 20%;
-}
-
-#noBtn {
-  position: absolute;
-  right: 20%;
-}
-
-/* FINAL */
-.final-gif {
-  width: 260px;
-}
-
-.hearts::before {
-  content: "💖 💕 💗 💓 💘 💞";
-  position: absolute;
-  width: 100%;
-  top: -10%;
-  font-size: 40px;
-  animation: rain 4s linear infinite;
-}
-
-@keyframes rain {
-  from { top: -10%; }
-  to { top: 110%; }
 }
