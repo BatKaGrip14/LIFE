@@ -377,4 +377,22 @@ button {
   position: relative;
 }
 
+/* ===== FIX SCREEN 5 VISIBILITY ===== */
+
+#screen5 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+#screen5 > * {
+  position: relative;
+  z-index: 20;
+  visibility: visible;
+  opacity: 1;
+}
+
 
