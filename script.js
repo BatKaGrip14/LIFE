@@ -49,7 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const x = Math.random() * 200 - 100;
     const y = Math.random() * 120 - 60;
 
-    noBtn.style.transform = translate(${x}px, ${y}px);
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+
   });
 
   // YES button
@@ -65,3 +66,4 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
 });
+
