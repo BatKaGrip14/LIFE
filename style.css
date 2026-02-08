@@ -149,12 +149,10 @@ button {
 }
 
 #screen4 {
-  background: url("assets/doodle2.jpg") center/cover no-repeat;
-
-  /* 🔥 IMPORTANT FIX */
-  display: block;          /* STOP flex centering */
-  position: relative;     /* anchor absolute children */
+  background: url("assets/doodle3.jpg") center/cover no-repeat;
+  position: relative;
 }
+
 
 /* 💌 FLOATING STICKER */
 .floating-sticker {
@@ -365,4 +363,18 @@ button {
 #screen5 .floating-sticker {
   display: none !important;
 }
+/* ===== SCREEN 5 FINAL STICKER ===== */
+#screen5 .final-sticker {
+  width: 260px;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+#screen5 {
+  position: relative;
+}
+
 
