@@ -294,5 +294,75 @@ button {
   z-index: 30;
 }
 
+/* =========================
+   HARD SCREEN SCOPING FIX
+   ========================= */
 
+/* SCREEN 4 ONLY */
+#screen4 .floating-sticker {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+#screen4 .valentine-box {
+  position: absolute;
+  top: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+#screen4 .avatar {
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  z-index: 30;
+}
+/* =========================
+   HARD SCREEN SCOPING FIX
+   ========================= */
+
+/* SCREEN 4 ONLY */
+#screen4 .floating-sticker {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+#screen4 .valentine-box {
+  position: absolute;
+  top: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+#screen4 .avatar {
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  z-index: 30;
+}
+
+/* SCREEN 5 ONLY */
+#screen5 .final-gif {
+  display: block;
+}
+
+#screen5 .floating-sticker {
+  display: none !important;
+}
 
