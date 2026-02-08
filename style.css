@@ -16,18 +16,23 @@ body {
 
 /* ===== SCREENS ===== */
 .screen {
-  position: absolute;
-  inset: 0;
   display: none;
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
 }
 
+
 .screen.active {
   display: flex;
-  animation: fadeIn 0.6s ease;
 }
 
 /* ===== BACKGROUNDS ===== */
@@ -158,5 +163,6 @@ button {
 @keyframes rain {
   to { top: 110%; }
 }
+
 
 
