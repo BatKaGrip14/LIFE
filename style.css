@@ -114,13 +114,9 @@ h1 {
 }
 /* 💖 HEART BACKGROUND */
 #screen4 {
-  background:
-    radial-gradient(circle at 20% 20%, #ff69b4 8%, transparent 9%),
-    radial-gradient(circle at 80% 30%, #ff69b4 8%, transparent 9%),
-    radial-gradient(circle at 40% 70%, #ff69b4 8%, transparent 9%),
-    #ffb6c1;
-  background-size: 120px 120px;
+  background: url("assets/doodle2.jpg") center/cover no-repeat;
 }
+
 
 /* 💌 VALENTINE BOX */
 .valentine-box {
@@ -247,5 +243,6 @@ h1 {
   margin-bottom: 20px;
   animation: pop 1s ease;
 }
+
 
 
