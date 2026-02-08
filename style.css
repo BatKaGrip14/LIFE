@@ -123,13 +123,7 @@ button {
 
 /* ===== SCREEN 5 ===== */
 
-#screen5 .final-wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-}
+
 
 .final-sticker {
   width: 260px;
@@ -164,4 +158,5 @@ button {
 @keyframes rain {
   to { top: 110%; }
 }
+
 
